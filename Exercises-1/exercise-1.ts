@@ -24,17 +24,7 @@
 //   console.log(getDiscount(100, 0.2));
   
 
-// ### 3. ⚠️ Dangerous `any`
 
-// Here’s a risky TypeScript function using `any`:
-
-// // ✅ Replace `any` with a safer approach and prevent the crash.
-// function printLength(x: any) {
-//     console.log(x.length);
-//   }
-
-//   printLength("Hello");
-//   printLength(123);
 
 function printLength(x: unknown) {
     if (typeof x === 'string') {
@@ -43,4 +33,4 @@ function printLength(x: unknown) {
   }
 
 //   printLength("Hello"); // should work
-  printLength(123); // should crash
+//   printLength(123); // should work
